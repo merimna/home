@@ -27,13 +27,18 @@ set tabstop=4
 
 set hlsearch
 set ruler
-set relativenumber
+
+if has("relativenumber")
+    set relativenumber
+endif
 
 set linespace=5
 
 set noswapfile
 
-set colorcolumn=81
+if has("colorcolumn")
+    set colorcolumn=81
+endif
 
 filetype plugin indent on
 
