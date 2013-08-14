@@ -27,7 +27,7 @@ set tabstop=4
 
 set hlsearch
 set ruler
-set number
+set relativenumber
 
 set linespace=5
 
