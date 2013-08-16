@@ -2,8 +2,8 @@ execute pathogen#infect()
 
 set wildmode=longest,list,full
 set wildmenu
-set background=dark
 colorscheme solarized
+set background=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
@@ -32,17 +32,31 @@ if has("relativenumber")
     set relativenumber
 endif
 
-set linespace=5
+" set linespace=5
 
 set noswapfile
 
 if has("colorcolumn")
     set colorcolumn=81
+    hi ColorColumn guibg=#3D2424
 endif
 
 filetype plugin indent on
 
-hi ColorColumn guibg=#3D2424
 
 autocmd BufRead,BufNewFile  *.adp set filetype=adp
 autocmd FileType ruby,yaml set sw=2 sts=2
+
+set laststatus=2
+
+if has('gui_running')
+  set guifont=Monaco_for_Powerline:h11
+endif
+
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='solarized'
+let g:bufferline_echo = 0
+set noshowmode
+set ambiwidth=double

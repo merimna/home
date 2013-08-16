@@ -28,3 +28,9 @@
 [submodule ".vim/bundle/xml.vim"]
 	path = .vim/bundle/xml.vim
 	url = git://github.com/othree/xml.vim.git
+[submodule "/Users/eliang/.vim/bundle/vim-airline"]
+	path = /Users/eliang/.vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
