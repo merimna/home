@@ -47,3 +47,6 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.zshrc.local ]; then
     . ~/.zshrc.local
 fi
+
+# Update git submodules to master
+alias gsnewest='git submodule foreach git pull origin master'
