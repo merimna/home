@@ -1,4 +1,5 @@
 execute pathogen#infect()
+Helptags
 
 set wildmode=longest,list,full
 set wildmenu
@@ -28,7 +29,7 @@ set tabstop=4
 set hlsearch
 set ruler
 
-if has("relativenumber")
+if exists('+relativenumber')
     set relativenumber
 endif
 
@@ -36,7 +37,7 @@ endif
 
 set noswapfile
 
-if has("colorcolumn")
+if exists('+colorcolumn')
     set colorcolumn=81
     hi ColorColumn guibg=#3D2424
 endif
@@ -60,3 +61,6 @@ let g:airline_theme='solarized'
 let g:bufferline_echo = 0
 set noshowmode
 set ambiwidth=double
+
+let g:ctrlp_max_files = 0
+let g:ctrlp_clear_cache_on_exit = 0
