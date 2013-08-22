@@ -50,3 +50,6 @@ fi
 
 # Update git submodules to master
 alias gsnewest='git submodule foreach git pull origin master'
+
+# Put the shell into vi mode
+bindkey -v
