@@ -5,6 +5,7 @@ set wildmode=longest,list,full
 set wildmenu
 colorscheme solarized
 set background=dark
+syntax enable
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
@@ -32,8 +33,6 @@ set ruler
 if exists('+relativenumber')
     set relativenumber
 endif
-
-" set linespace=5
 
 set noswapfile
 
