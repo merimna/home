@@ -32,6 +32,8 @@ set ruler
 
 if exists('+relativenumber')
     set relativenumber
+else
+    set number
 endif
 
 set noswapfile
