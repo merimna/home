@@ -63,5 +63,8 @@ let g:bufferline_echo = 0
 set noshowmode
 set ambiwidth=double
 
-let g:ctrlp_max_files = 0
-let g:ctrlp_clear_cache_on_exit = 0
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => unite.vim settings
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctrl-p for file search
+nnoremap <C-p> :Unite file_rec/async<cr>
