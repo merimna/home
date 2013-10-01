@@ -4,3 +4,4 @@
 /.vim/.netrwhist
 /.vim/bundle/*/doc/
 !/.oh-my-zsh/
+!/.oh-my-zsh-custom/
