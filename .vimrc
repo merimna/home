@@ -68,3 +68,7 @@ set ambiwidth=double
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctrl-p for file search
 nnoremap <C-p> :Unite file_rec/async<cr>
+
+let g:unite_winheight = 10
+let g:unite_split_rule = 'bottomleft'
+let g:unite_enable_start_insert = 1
