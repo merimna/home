@@ -40,7 +40,6 @@ set noswapfile
 
 if exists('+colorcolumn')
     set colorcolumn=81
-    hi ColorColumn guibg=#3D2424
 endif
 
 filetype plugin indent on
