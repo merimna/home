@@ -59,3 +59,6 @@ bindkey -v
 
 # print the ssh client ip
 alias -g SSHR="echo $SSH_CLIENT | awk '{print $1}'"
+
+# Pass failed globs to commands
+unsetopt nomatch
