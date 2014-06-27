@@ -24,16 +24,15 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 set hlsearch
 set ruler
 
+set number
 if exists('+relativenumber')
     set relativenumber
-else
-    set number
 endif
 
 set noswapfile
@@ -50,24 +49,10 @@ autocmd FileType ruby,yaml set sw=2 sts=2
 
 set laststatus=2
 
-if has('gui_running')
-  set guifont=Monaco_for_Powerline:h11
-endif
-
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_theme='solarized'
 let g:bufferline_echo = 0
 set noshowmode
 set ambiwidth=double
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => unite.vim settings
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ctrl-p for file search
-nnoremap <C-p> :Unite file_rec/async<cr>
-
-let g:unite_winheight = 10
-let g:unite_split_rule = 'bot'
-let g:unite_enable_start_insert = 1
