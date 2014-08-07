@@ -1,5 +1,27 @@
-execute pathogen#infect()
-Helptags
+" Required Vundle setup
+filetype off
+set runtimepath+=~/.vim/bundle/vundle
+call vundle#begin()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'Raimondi/delimitMate'
+Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-bundler'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
+Bundle 'elzr/vim-json'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'Shougo/vimproc.vim'
+Bundle 'othree/xml.vim'
+
+call vundle#end()
+filetype plugin on
 
 set wildmode=longest,list,full
 set wildmenu
@@ -13,6 +35,12 @@ syntax enable
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
+
+" Faster pane movement
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
