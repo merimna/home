@@ -22,3 +22,6 @@ unsetopt nomatch
 # net rpc shutdown -I <machinename> -U user
 
 export HISTTIMEFORMAT='%F %T '
+
+# added by travis gem
+[ -f /Users/eve/.travis/travis.sh ] && source /Users/eve/.travis/travis.sh

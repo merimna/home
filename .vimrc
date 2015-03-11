@@ -5,29 +5,39 @@ call vundle#begin()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'Raimondi/delimitMate'
+" Syntax
 Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-bundler'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-fugitive'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-haml'
 Bundle 'elzr/vim-json'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'Shougo/vimproc.vim'
 Bundle 'othree/xml.vim'
+Bundle 'jelera/vim-javascript-syntax'
+" Bundle 'pangloss/vim-javascript'
+Plugin 'derekwyatt/vim-scala'
+
+" Bundle 'Raimondi/delimitMate'
+" Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/syntastic'
+Bundle 'bling/vim-airline'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-fugitive'
+" Bundle 'tpope/vim-rails'
+" Bundle 'tpope/vim-rake'
+" Bundle 'Shougo/vimproc.vim'
+Bundle 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin on
 
 set wildmode=longest,list,full
-set wildmenu
+if exists('+wildmenu')
+    set wildmenu
+endif
 colorscheme solarized
 set background=dark
-syntax enable
+if exists('+syntax')
+    syntax enable
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
@@ -51,7 +61,6 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
 set shiftwidth=2
 set tabstop=2
 
@@ -63,8 +72,6 @@ if exists('+relativenumber')
     set relativenumber
 endif
 
-set noswapfile
-
 if exists('+colorcolumn')
     set colorcolumn=81
 endif
@@ -73,7 +80,7 @@ filetype plugin indent on
 
 
 autocmd BufRead,BufNewFile  *.adp set filetype=adp
-autocmd FileType ruby,yaml set sw=2 sts=2
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 set laststatus=2
 
