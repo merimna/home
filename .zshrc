@@ -25,3 +25,6 @@ export HISTTIMEFORMAT='%F %T '
 
 # added by travis gem
 [ -f /Users/eve/.travis/travis.sh ] && source /Users/eve/.travis/travis.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/eliang/.gvm/bin/gvm-init.sh" ]] && source "/Users/eliang/.gvm/bin/gvm-init.sh"

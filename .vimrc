@@ -1,30 +1,41 @@
 " Required Vundle setup
+set nocompatible
 filetype off
-set runtimepath+=~/.vim/bundle/vundle
+
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Syntax
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-haml'
-Bundle 'elzr/vim-json'
-Bundle 'othree/xml.vim'
-Bundle 'jelera/vim-javascript-syntax'
-" Bundle 'pangloss/vim-javascript'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-haml'
+Plugin 'elzr/vim-json'
+Plugin 'othree/xml.vim'
+Plugin 'jelera/vim-javascript-syntax'
+" Plugin 'pangloss/vim-javascript'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'evidens/vim-twig'
+Plugin 'groenewege/vim-less'
 
-" Bundle 'Raimondi/delimitMate'
-" Bundle 'scrooloose/nerdtree'
-" Bundle 'scrooloose/syntastic'
-Bundle 'bling/vim-airline'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-fugitive'
-" Bundle 'tpope/vim-rails'
-" Bundle 'tpope/vim-rake'
-" Bundle 'Shougo/vimproc.vim'
-Bundle 'christoomey/vim-tmux-navigator'
+" Plugin 'Raimondi/delimitMate'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
+Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-rake'
+" Plugin 'Shougo/vimproc.vim'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'kien/ctrlp.vim'
+Plugin 'rking/ag.vim'
+Plugin 'tpope/vim-vinegar'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'AndrewRadev/linediff.vim'
 
 call vundle#end()
 filetype plugin on
@@ -91,3 +102,12 @@ let g:airline_theme='solarized'
 let g:bufferline_echo = 0
 set noshowmode
 set ambiwidth=double
+
+" ctrlp settings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cache_dir = $HOME.'/.ctrlp'
+let g:ctrlp_clear_cache_on_exit = 0
+
+" Ag settings
+ca Ag Ag!
